@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9BB9241F-D2F2-4C37-AF22-BFAFDEDB5A85}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Trader.Core</RootNamespace>
+    <AssemblyName>Trader.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.2.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\TachyonTrader\packages\BouncyCastle.1.8.2\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging.Core, Version=3.4.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\TachyonTrader\packages\Common.Logging.Core.3.4.1\lib\net40\Common.Logging.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\TachyonTrader\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\TachyonTrader\packages\iTextSharp.5.5.13\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Nethereum.ABI, Version=3.0.0.0, Culture=neutral, PublicKeyToken=8768a594786aba4e, processorArchitecture=MSIL">
+      <HintPath>..\TachyonTrader\packages\Nethereum.ABI.3.0.0\lib\net451\Nethereum.ABI.dll</HintPath>
+    </Reference>
+    <Reference Include="Nethereum.Accounts, Version=3.0.0.0, Culture=neutral, PublicKeyToken=8768a594786aba4e, processorArchitecture=MSIL">
+      <HintPath>..\TachyonTrader\packages\Nethereum.Accounts.3.0.0\lib\net451\Nethereum.Accounts.dll</HintPath>
+    </Reference>
+    <Reference Include="Nethereum.Contracts, Version=3.0.0.0, Culture=neutral, PublicKeyToken=8768a594786aba4e, processorArchitecture=MSIL">
+      <HintPath>..\TachyonTrader\packages\Nethereum.Contracts.3.0.0\lib\net451\Nethereum.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="Nethereum.Geth, Version=3.0.0.0, Culture=neutral, PublicKeyToken=8768a594786aba4e, processorArchitecture=MSIL">
+      <HintPath>..\TachyonTrader\packages\Nethereum.Geth.3.0.0\lib\net451\Nethereum.Geth.dll</HintPath>
+    </Reference>
+    <Reference Include="Nethereum.Hex, Version=3.0.0.0, Culture=neutral, PublicKeyToken=8768a594786aba4e, processorArchitecture=MSIL">
+      <HintPath>..\TachyonTrader\packages\Nethereum.Hex.3.0.0\lib\net451\Nethereum.Hex.dll</HintPath>
+    </Reference>
+    <Reference Include="Nethereum.JsonRpc.Client, Version=3.0.0.0, Culture=neutral, PublicKeyToken=8768a594786aba4e, processorArchitecture=MSIL">
+      <HintPath>..\TachyonTrader\packages\Nethereum.JsonRpc.Client.3.0.0\lib\net451\Nethereum.JsonRpc.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Nethereum.JsonRpc.RpcClient, Version=3.0.0.0, Culture=neutral, PublicKeyToken=8768a594786aba4e, processorArchitecture=MSIL">
+      <HintPath>..\TachyonTrader\packages\Nethereum.JsonRpc.RpcClient.3.0.0\lib\net451\Nethereum.JsonRpc.RpcClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Nethereum.KeyStore, Version=3.0.0.0, Culture=neutral, PublicKeyToken=8768a594786aba4e, processorArchitecture=MSIL">
+      <HintPath>..\TachyonTrader\packages\Nethereum.KeyStore.3.0.0\lib\net451\Nethereum.KeyStore.dll</HintPath>
+    </Reference>
+    <Reference Include="Nethereum.RLP, Version=3.0.0.0, Culture=neutral, PublicKeyToken=8768a594786aba4e, processorArchitecture=MSIL">
+      <HintPath>..\TachyonTrader\packages\Nethereum.RLP.3.0.0\lib\net451\Nethereum.RLP.dll</HintPath>
+    </Reference>
+    <Reference Include="Nethereum.RPC, Version=3.0.0.0, Culture=neutral, PublicKeyToken=8768a594786aba4e, processorArchitecture=MSIL">
+      <HintPath>..\TachyonTrader\packages\Nethereum.RPC.3.0.0\lib\net451\Nethereum.RPC.dll</HintPath>
+    </Reference>
+    <Reference Include="Nethereum.Signer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=8768a594786aba4e, processorArchitecture=MSIL">
+      <HintPath>..\TachyonTrader\packages\Nethereum.Signer.3.0.0\lib\net451\Nethereum.Signer.dll</HintPath>
+    </Reference>
+    <Reference Include="Nethereum.Util, Version=3.0.0.0, Culture=neutral, PublicKeyToken=8768a594786aba4e, processorArchitecture=MSIL">
+      <HintPath>..\TachyonTrader\packages\Nethereum.Util.3.0.0\lib\net451\Nethereum.Util.dll</HintPath>
+    </Reference>
+    <Reference Include="Nethereum.Web3, Version=3.0.0.0, Culture=neutral, PublicKeyToken=8768a594786aba4e, processorArchitecture=MSIL">
+      <HintPath>..\TachyonTrader\packages\Nethereum.Web3.3.0.0\lib\net451\Nethereum.Web3.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\TachyonTrader\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=2.4.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\TachyonTrader\packages\NPOI.2.4.0\lib\net40\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.4.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\TachyonTrader\packages\NPOI.2.4.0\lib\net40\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.4.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\TachyonTrader\packages\NPOI.2.4.0\lib\net40\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.4.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\TachyonTrader\packages\NPOI.2.4.0\lib\net40\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account.cs" />
+    <Compile Include="Attributes\FunctionReferenceAttribute.cs" />
+    <Compile Include="DTO\ContractDTO.cs" />
+    <Compile Include="Models\Asset.cs" />
+    <Compile Include="Models\Transaction.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reporting\ExcelExporter.cs" />
+    <Compile Include="Reporting\Exporter.cs" />
+    <Compile Include="Reporting\PDFExporter.cs" />
+    <Compile Include="Statistics.cs" />
+    <Compile Include="Stats\Stats.cs" />
+    <Compile Include="TradingContract.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,391 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9420BA5B-C0DC-4BE7-AD19-941B70678453}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Trader</RootNamespace>
+    <AssemblyName>Trader</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.2.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\TachyonTrader\packages\BouncyCastle.1.8.2\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging.Core, Version=3.4.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\TachyonTrader\packages\Common.Logging.Core.3.4.1\lib\net40\Common.Logging.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.Charts.Design, Version=14.1.0.34, Culture=neutral, PublicKeyToken=90f470f34c89ccaf, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar.Charts, Version=14.1.0.34, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar.Keyboard, Version=14.1.0.34, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar.Layout, Version=14.1.0.34, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar.SuperGrid, Version=14.1.0.34, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar2, Version=14.1.0.34, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.SuperGrid.Design, Version=14.1.0.34, Culture=neutral, PublicKeyToken=26d81176cfa2b486, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.TreeGX, Version=14.1.0.34, Culture=neutral, PublicKeyToken=055db68f670cfeab, processorArchitecture=MSIL" />
+    <Reference Include="Nethereum.ABI, Version=3.0.0.0, Culture=neutral, PublicKeyToken=8768a594786aba4e, processorArchitecture=MSIL">
+      <HintPath>..\TachyonTrader\packages\Nethereum.ABI.3.0.0\lib\net451\Nethereum.ABI.dll</HintPath>
+    </Reference>
+    <Reference Include="Nethereum.Accounts, Version=3.0.0.0, Culture=neutral, PublicKeyToken=8768a594786aba4e, processorArchitecture=MSIL">
+      <HintPath>..\TachyonTrader\packages\Nethereum.Accounts.3.0.0\lib\net451\Nethereum.Accounts.dll</HintPath>
+    </Reference>
+    <Reference Include="Nethereum.Contracts, Version=3.0.0.0, Culture=neutral, PublicKeyToken=8768a594786aba4e, processorArchitecture=MSIL">
+      <HintPath>..\TachyonTrader\packages\Nethereum.Contracts.3.0.0\lib\net451\Nethereum.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="Nethereum.Geth, Version=3.0.0.0, Culture=neutral, PublicKeyToken=8768a594786aba4e, processorArchitecture=MSIL">
+      <HintPath>..\TachyonTrader\packages\Nethereum.Geth.3.0.0\lib\net451\Nethereum.Geth.dll</HintPath>
+    </Reference>
+    <Reference Include="Nethereum.Hex, Version=3.0.0.0, Culture=neutral, PublicKeyToken=8768a594786aba4e, processorArchitecture=MSIL">
+      <HintPath>..\TachyonTrader\packages\Nethereum.Hex.3.0.0\lib\net451\Nethereum.Hex.dll</HintPath>
+    </Reference>
+    <Reference Include="Nethereum.JsonRpc.Client, Version=3.0.0.0, Culture=neutral, PublicKeyToken=8768a594786aba4e, processorArchitecture=MSIL">
+      <HintPath>..\TachyonTrader\packages\Nethereum.JsonRpc.Client.3.0.0\lib\net451\Nethereum.JsonRpc.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Nethereum.JsonRpc.RpcClient, Version=3.0.0.0, Culture=neutral, PublicKeyToken=8768a594786aba4e, processorArchitecture=MSIL">
+      <HintPath>..\TachyonTrader\packages\Nethereum.JsonRpc.RpcClient.3.0.0\lib\net451\Nethereum.JsonRpc.RpcClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Nethereum.KeyStore, Version=3.0.0.0, Culture=neutral, PublicKeyToken=8768a594786aba4e, processorArchitecture=MSIL">
+      <HintPath>..\TachyonTrader\packages\Nethereum.KeyStore.3.0.0\lib\net451\Nethereum.KeyStore.dll</HintPath>
+    </Reference>
+    <Reference Include="Nethereum.RLP, Version=3.0.0.0, Culture=neutral, PublicKeyToken=8768a594786aba4e, processorArchitecture=MSIL">
+      <HintPath>..\TachyonTrader\packages\Nethereum.RLP.3.0.0\lib\net451\Nethereum.RLP.dll</HintPath>
+    </Reference>
+    <Reference Include="Nethereum.RPC, Version=3.0.0.0, Culture=neutral, PublicKeyToken=8768a594786aba4e, processorArchitecture=MSIL">
+      <HintPath>..\TachyonTrader\packages\Nethereum.RPC.3.0.0\lib\net451\Nethereum.RPC.dll</HintPath>
+    </Reference>
+    <Reference Include="Nethereum.Signer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=8768a594786aba4e, processorArchitecture=MSIL">
+      <HintPath>..\TachyonTrader\packages\Nethereum.Signer.3.0.0\lib\net451\Nethereum.Signer.dll</HintPath>
+    </Reference>
+    <Reference Include="Nethereum.Util, Version=3.0.0.0, Culture=neutral, PublicKeyToken=8768a594786aba4e, processorArchitecture=MSIL">
+      <HintPath>..\TachyonTrader\packages\Nethereum.Util.3.0.0\lib\net451\Nethereum.Util.dll</HintPath>
+    </Reference>
+    <Reference Include="Nethereum.Web3, Version=3.0.0.0, Culture=neutral, PublicKeyToken=8768a594786aba4e, processorArchitecture=MSIL">
+      <HintPath>..\TachyonTrader\packages\Nethereum.Web3.3.0.0\lib\net451\Nethereum.Web3.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\TachyonTrader\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Northwoods.Go">
+      <HintPath>..\..\..\..\Documents\GoDiagram Win 5.2.0.46\lib4.6\Northwoods.Go.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Aboutfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aboutfrm.designer.cs">
+      <DependentUpon>Aboutfrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddAsset.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddAsset.Designer.cs">
+      <DependentUpon>AddAsset.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddTransaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddTransaction.Designer.cs">
+      <DependentUpon>AddTransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\NodeInfoDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\NodeInfoDetails.Designer.cs">
+      <DependentUpon>NodeInfoDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AssetDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\AssetDetails.Designer.cs">
+      <DependentUpon>AssetDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AccountDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\AccountDetails.Designer.cs">
+      <DependentUpon>AccountDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AssetsList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\AssetsList.Designer.cs">
+      <DependentUpon>AssetsList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\BaseControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\BaseControl.Designer.cs">
+      <DependentUpon>BaseControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DistributionGraph.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DistributionGraph.Designer.cs">
+      <DependentUpon>DistributionGraph.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Sequence.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Sequence.Designer.cs">
+      <DependentUpon>Sequence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SequenceDiagram.cs" />
+    <Compile Include="Controls\StartPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\StartPage.Designer.cs">
+      <DependentUpon>StartPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Stats.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Stats.Designer.cs">
+      <DependentUpon>Stats.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TransactionList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\TransactionList.Designer.cs">
+      <DependentUpon>TransactionList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeployContract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeployContract.Designer.cs">
+      <DependentUpon>DeployContract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Interfaces.cs" />
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Register.Designer.cs">
+      <DependentUpon>Register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils.cs" />
+    <EmbeddedResource Include="Aboutfrm.resx">
+      <DependentUpon>Aboutfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddAsset.resx">
+      <DependentUpon>AddAsset.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddTransaction.resx">
+      <DependentUpon>AddTransaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\NodeInfoDetails.resx">
+      <DependentUpon>NodeInfoDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\AssetDetails.resx">
+      <DependentUpon>AssetDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\AccountDetails.resx">
+      <DependentUpon>AccountDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\AssetsList.resx">
+      <DependentUpon>AssetsList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\BaseControl.resx">
+      <DependentUpon>BaseControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DistributionGraph.resx">
+      <DependentUpon>DistributionGraph.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Sequence.resx">
+      <DependentUpon>Sequence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\StartPage.resx">
+      <DependentUpon>StartPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Stats.resx">
+      <DependentUpon>Stats.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TransactionList.resx">
+      <DependentUpon>TransactionList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeployContract.resx">
+      <DependentUpon>DeployContract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Register.resx">
+      <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Back1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackDark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CodeDark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CodeLight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DarkTheme.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Document.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Forward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ForwardDark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LightTheme.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewProject.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewProjectDark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OpenExistingPlace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OpenFile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OpenFileDark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Redo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RedoDark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SaveAllButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SaveAllButtonDark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SaveButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SaveButtonDark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Start.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StartDark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Undo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UndoDark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Unpinned.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Trader.Core\Trader.Core.csproj">
+      <Project>{9bb9241f-d2f2-4c37-af22-bfafdedb5a85}</Project>
+      <Name>Trader.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-transaction-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-microsoft-excel-52.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-pdf-52.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-export-52.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-import-52.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
